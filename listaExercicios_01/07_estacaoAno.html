@@ -5,11 +5,64 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt("Em que hemisfério você está? (N-Norte | S-Sul)").toUpperCase();
+    const mesDoAno = parseInt("Informe o número do mês atual:");
 
     //PROCESSAMENTO
+    let estacaoAno;
 
+    switch (hemisferio) {
+        case "N":
+            switch (mesDoAno) {
+                case 1:
+                case 2:
+                case 3:
+                    estacaoAno = "INVERNO!"
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    estacaoAno = "PRIMAVERA!"
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    estacaoAno = "VERÃO!"
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    estacaoAno = "OUTONO!"
+                    break;
+            }
+            break;
+    
+        case "S":
+            switch (mesDoAno) {
+                case 1:
+                case 2:
+                case 3:
+                    estacaoAno = "VERÃO!"
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    estacaoAno = "OUTONO!"
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    estacaoAno = "INVERNO!"
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    estacaoAno = "PRIMAVERA!"
+                    break;
+            }
+            break;
+    }
     
     //SAÍDA
-
+    document.write(`A estação respectiva ao hemisfério e mês é ${estacaoAno}!`);
 </script>
