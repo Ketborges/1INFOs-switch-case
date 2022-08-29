@@ -4,12 +4,66 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    //entrada
+    const hemisferio = prompt("Em qual hemisfério você está? (N-Norte | S-Sul)");
+    const mesDoAno = parseInt(prompt("Qual o mes atual?(Informe o número do mes)"));
 
 
-    //PROCESSAMENTO
-
+    //processamento
+    let resultadoNaTela;
+    switch (hemisferio) {
+        case "N":
+            switch (mesDoAno) {
+                case 1:
+                case 2:
+                case 3:
+                    resultadoNaTela = "INVERNO!"
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    resultadoNaTela = "PRIMAVERA!"
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    resultadoNaTela = "VERÃO!"
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    resultadoNaTela = "OUTONO!"
+                    break;
+            }
+            break;
     
-    //SAÍDA
+        case "S":
+            switch (mesDoAno) {
+                case 1:
+                case 2:
+                case 3:
+                    resultadoNaTela = "VERÃO!"
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    resultadoNaTela = "OUTONO!"
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    resultadoNaTela = "INVERNO!"
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    resultadoNaTela = "PRIMAVERA!"
+                    break;
+            }
+            break;
+        }
 
-</script>
+    //saída
+    document.write(`A estação é ${resultadoNaTela}!`);
+
+    </script>

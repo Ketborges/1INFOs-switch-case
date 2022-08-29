@@ -4,11 +4,18 @@
     */
 
     //ENTRADA
-
+const numero = parseInt(prompt("Informe um número"))
     
     //PROCESSAMENTO
+let resposta
+switch (numero % 2) {
+    case 0: resposta = "Par"
+    break;
+    case 1: resposta = "Ímpar"
+}
 
     
     //SAÍDA
+document.write(`${resposta}`)
 
 </script>

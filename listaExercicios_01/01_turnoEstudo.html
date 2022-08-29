@@ -11,11 +11,22 @@
     */
 
     //ENTRADA
-
+const periodo = prompt("Qual é seu turno de estudo: M-matutino ou V-Vespertino ou N-Noturno").toLocaleUpperCase();
     
     //PROCESSAMENTO
-
-    
+let resposta
+    switch (periodo) {
+        case "M": resposta = "Bom Dia!"
+            
+            break;
+    case "V": resposta = "Boa Tarde!"
+        
+            break;
+            case "N": resposta = "Boa Noite!"
+            break;
+            default: resposta = "Valor Inválido!";
+    }
     //SAÍDA
+document.write(`${resposta}`)
 
 </script>
